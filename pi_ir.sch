@@ -1,0 +1,272 @@
+EESchema Schematic File Version 2
+LIBS:AndiceLabs
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:pi_ir-cache
+EELAYER 25 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "Pi IR"
+Date "2017-11-08"
+Rev "P0"
+Comp "AndiceLabs, LLC"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L TSOP382xx U1
+U 1 1 5A03DCA7
+P 7100 3550
+F 0 "U1" H 6700 3850 50  0000 L CNN
+F 1 "TSOP382xx" H 6700 3250 50  0000 L CNN
+F 2 "Opto-Devices:IRReceiver_Vishay_MINICAST-3pin" H 7050 3175 50  0001 C CNN
+F 3 "" H 7750 3850 50  0001 C CNN
+	1    7100 3550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L LED D2
+U 1 1 5A03DD58
+P 4000 3100
+F 0 "D2" H 4000 3200 50  0000 C CNN
+F 1 "LED" H 4000 3000 50  0000 C CNN
+F 2 "LEDs:LED_D5.0mm_Horizontal_O3.81mm_Z3.0mm" H 4000 3100 60  0001 C CNN
+F 3 "" H 4000 3100 60  0000 C CNN
+	1    4000 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L 2N7000 Q1
+U 1 1 5A03DDC3
+P 4100 3550
+F 0 "Q1" H 4300 3625 50  0000 L CNN
+F 1 "2N7000" H 4300 3550 50  0000 L CNN
+F 2 "SOT_THT:TO-92_Molded_Narrow" H 4300 3475 50  0001 L CIN
+F 3 "" H 4100 3550 50  0001 L CNN
+	1    4100 3550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR01
+U 1 1 5A03DE32
+P 5000 2850
+F 0 "#PWR01" H 5000 2700 50  0001 C CNN
+F 1 "+3.3V" H 5000 2990 50  0000 C CNN
+F 2 "" H 5000 2850 50  0001 C CNN
+F 3 "" H 5000 2850 50  0001 C CNN
+	1    5000 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 3050 5150 3050
+Wire Wire Line
+	5000 2850 5000 3050
+Text Label 5800 3550 0    50   ~ 0
+GPIO18
+Text Label 4400 3550 0    50   ~ 0
+GPIO17
+$Comp
+L GND #PWR02
+U 1 1 5A03DED8
+P 5800 3250
+F 0 "#PWR02" H 5800 3000 50  0001 C CNN
+F 1 "GND" H 5800 3100 50  0000 C CNN
+F 2 "" H 5800 3250 50  0001 C CNN
+F 3 "" H 5800 3250 50  0001 C CNN
+	1    5800 3250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5650 3250 5800 3250
+Wire Wire Line
+	5650 3550 6700 3550
+$Comp
+L +3.3V #PWR03
+U 1 1 5A03E177
+P 6600 2850
+F 0 "#PWR03" H 6600 2700 50  0001 C CNN
+F 1 "+3.3V" H 6600 2990 50  0000 C CNN
+F 2 "" H 6600 2850 50  0001 C CNN
+F 3 "" H 6600 2850 50  0001 C CNN
+	1    6600 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 3350 6700 3350
+Wire Wire Line
+	6600 2850 6600 3350
+$Comp
+L GND #PWR04
+U 1 1 5A03E1A5
+P 6600 3850
+F 0 "#PWR04" H 6600 3600 50  0001 C CNN
+F 1 "GND" H 6600 3700 50  0000 C CNN
+F 2 "" H 6600 3850 50  0001 C CNN
+F 3 "" H 6600 3850 50  0001 C CNN
+	1    6600 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 3850 6600 3750
+Wire Wire Line
+	6600 3750 6700 3750
+Wire Wire Line
+	5150 3550 4300 3550
+$Comp
+L GND #PWR05
+U 1 1 5A03E3AA
+P 4000 3850
+F 0 "#PWR05" H 4000 3600 50  0001 C CNN
+F 1 "GND" H 4000 3700 50  0000 C CNN
+F 2 "" H 4000 3850 50  0001 C CNN
+F 3 "" H 4000 3850 50  0001 C CNN
+	1    4000 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 3850 4000 3750
+$Comp
+L LED D1
+U 1 1 5A03E607
+P 4000 2700
+F 0 "D1" H 4000 2800 50  0000 C CNN
+F 1 "LED" H 4000 2600 50  0000 C CNN
+F 2 "LEDs:LED_D5.0mm_Horizontal_O3.81mm_Z3.0mm" H 4000 2700 60  0001 C CNN
+F 3 "" H 4000 2700 60  0000 C CNN
+	1    4000 2700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4000 3250 4000 3350
+$Comp
+L R R2
+U 1 1 5A03E7CD
+P 4000 2350
+F 0 "R2" V 4080 2350 50  0000 C CNN
+F 1 "R" V 4000 2350 50  0000 C CNN
+F 2 "Resistors_Universal:Resistor_SMD+THTuniversal_0805to1206_RM10_HandSoldering" V 3930 2350 50  0001 C CNN
+F 3 "" H 4000 2350 50  0001 C CNN
+	1    4000 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR06
+U 1 1 5A03E868
+P 4000 2150
+F 0 "#PWR06" H 4000 2000 50  0001 C CNN
+F 1 "+3.3V" H 4000 2290 50  0000 C CNN
+F 2 "" H 4000 2150 50  0001 C CNN
+F 3 "" H 4000 2150 50  0001 C CNN
+	1    4000 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 2950 4000 2850
+Wire Wire Line
+	4000 2200 4000 2150
+$Comp
+L C C2
+U 1 1 5A03EA88
+P 6400 3100
+F 0 "C2" H 6425 3200 50  0000 L CNN
+F 1 "C" H 6425 3000 50  0000 L CNN
+F 2 "Resistors_Universal:Resistor_SMD+THTuniversal_0805to1206_RM10_HandSoldering" H 6438 2950 50  0001 C CNN
+F 3 "" H 6400 3100 50  0001 C CNN
+	1    6400 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR07
+U 1 1 5A03ED6D
+P 6400 3300
+F 0 "#PWR07" H 6400 3050 50  0001 C CNN
+F 1 "GND" H 6400 3150 50  0000 C CNN
+F 2 "" H 6400 3300 50  0001 C CNN
+F 3 "" H 6400 3300 50  0001 C CNN
+	1    6400 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 3300 6400 3250
+Wire Wire Line
+	6400 2950 6400 2900
+Wire Wire Line
+	6400 2900 6600 2900
+Connection ~ 6600 2900
+$Comp
+L C C1
+U 1 1 5A03EE2B
+P 4800 3100
+F 0 "C1" H 4825 3200 50  0000 L CNN
+F 1 "C" H 4825 3000 50  0000 L CNN
+F 2 "Resistors_Universal:Resistor_SMD+THTuniversal_0805to1206_RM10_HandSoldering" H 4838 2950 50  0001 C CNN
+F 3 "" H 4800 3100 50  0001 C CNN
+	1    4800 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR08
+U 1 1 5A03EF1C
+P 4800 3300
+F 0 "#PWR08" H 4800 3050 50  0001 C CNN
+F 1 "GND" H 4800 3150 50  0000 C CNN
+F 2 "" H 4800 3300 50  0001 C CNN
+F 3 "" H 4800 3300 50  0001 C CNN
+	1    4800 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 3300 4800 3250
+Wire Wire Line
+	4800 2950 4800 2900
+Wire Wire Line
+	4800 2900 5000 2900
+Connection ~ 5000 2900
+Wire Wire Line
+	4000 2550 4000 2500
+$Comp
+L Conn_02x10_Odd_Even J1
+U 1 1 5A0BBDC2
+P 5350 3450
+F 0 "J1" H 5400 3950 50  0000 C CNN
+F 1 "S9197-ND" H 5400 2850 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_2x10_Pitch2.54mm" H 5350 3450 50  0001 C CNN
+F 3 "" H 5350 3450 50  0001 C CNN
+	1    5350 3450
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
